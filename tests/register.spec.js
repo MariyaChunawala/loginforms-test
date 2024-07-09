@@ -14,27 +14,6 @@ const { test, expect, chromium } = require('@playwright/test');
 // });
 
 test.describe('RegistrationForm Component', () => {
-    // test.beforeEach(async ({ }, testInfo) => {
-    //     //     // Create a new context and enable video recording
-    //     //     const context = await browser.newContext({
-    //     //         recordVideo: {
-    //     //             dir: `F:\\github\\zbio\\loginforms-test\\videos\\${testInfo.title.replace(/\s+/g, '_')}`, // Directory to save videos
-    //     //             size: { width: 1280, height: 720 } // Video frame size
-    //     //         }
-    //     //     });
-
-    //     //     // Assign the context to testInfo to close it later
-    //     //     testInfo.context = context;
-    //     //     // Create a new page
-    //     //     testInfo.page = await context.newPage();
-    //     // });
-
-    //     // test.afterEach(async ({ }, testInfo) => {
-    //     //     // Close the context after each test
-    //     //     await testInfo.context.close();
-    //     // });
-
-    // });
     test('should render the registration form', async ({ page }) => {
         await page.goto('http://localhost:3000');
         await expect(page.locator('text=Email address')).toBeVisible();
